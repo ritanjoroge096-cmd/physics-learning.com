@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jitimu Physics Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+.badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.badge-card {
+  width: 150px;
+  height: 150px;
+  background: #f0f8ff;
+  border: 2px solid #2c5364;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  opacity: 0.4;
+  transition: all 0.5s ease;
+}
+.badge-card.unlocked {
+  opacity: 1;
+  animation: glow 1.5s infinite;
+}
+.badge-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #2c5364; }
+  50% { box-shadow: 0 0 20px #2c5364; }
+  100% { box-shadow: 0 0 5px #2c5364; }
+}
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+      background-color: #fefefe;
+      color: #333;
+    }
+    header.hero {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .cta-button {
+      background: white;
+      color: #2c5364;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      color: #2c5364;
+    }
+    .copilot-box, .badge-container, .offline-warning {
+      background: #e8f0fe;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .badge {
+      background: #fff;
+      border: 2px solid #2c5364;
+      border-radius: 10px;
+      padding: 20px;
+      width: 150px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: bounce 1.5s infinite;
+      text-align: center;
+      margin: 10px;
+    }
+    .badge .icon {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    label, input {
+      display: block;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background: #2c5364;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #2c5364;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+<h2>📘 KCSE Physics Form 1: Measurement (Expanded)</h2>
+<p>This module includes detailed notes, diagrams, calculators, and KCSE-style practice questions.</p>
+  <header class="hero">
+    <h1>Jitimu Physics Hub</h1>
+    <p>Master KCSE Physics with interactive lessons, quizzes, simulations, and smart tools</p>
+    <a href="#lesson" class="cta-button">Start Learning</a>
+  </header>
+
+  <main>
+<section id="measurement-notes">
+  <h2>📘 KCSE Physics Form 1: Measurement (Expanded Notes)</h2>
+
+  <h3>1. Introduction to Measurement</h3>
+  <p>Measurement is the process of comparing a physical quantity with a standard unit. It allows scientists and learners to quantify observations, conduct experiments, and communicate results with precision. In physics, accurate measurement is essential for validating theories, conducting experiments, and solving real-world problems.</p>
+
+  <h3>2. Physical Quantities</h3>
+  <p><strong>Base Quantities:</strong> Length, Mass, Time, Temperature, Electric Current, Luminous Intensity, Amount of Substance.</p>
+  <p><strong>Derived Quantities:</strong> Area, Volume, Density, Speed, Acceleration, Force.</p>
+
+  <h3>3. SI Units and Prefixes</h3>
+  <ul>
+    <li>Metre (m) – Length</li>
+    <li>Kilogram (kg) – Mass</li>
+    <li>Second (s) – Time</li>
+    <li>Kelvin (K) – Temperature</li>
+    <li>Ampere (A) – Electric Current</li>
+    <li>Prefixes: milli (10⁻³), centi (10⁻²), kilo (10³)</li>
+  </ul>
+
+  <h3>4. Instruments and Their Uses</h3>
+  <ul>
+    <li>Ruler – Measures straight lengths (least count: 1 mm)</li>
+    <li>Vernier Calipers – Measures internal/external diameters (least count: 0.1 mm)</li>
+    <li>Micrometer Screw Gauge – Measures small thicknesses (least count: 0.01 mm)</li>
+    <li>Beam Balance – Measures mass</li>
+    <li>Stopwatch – Measures time intervals</li>
+    <li>Measuring Cylinder – Measures volume of liquids</li>
+  </ul>
+
+  <h3>5. Errors in Measurement</h3>
+  <ul>
+    <li><strong>Parallax Error:</strong> Eye not level with scale</li>
+    <li><strong>Zero Error:</strong> Instrument doesn’t read zero when it should</li>
+    <li><strong>Systematic Error:</strong> Faulty calibration</li>
+    <li><strong>Random Error:</strong> Human reaction or environmental factors</li>
+  </ul>
+
+  <h3>6. Significant Figures</h3>
+  <p>Significant figures reflect the precision of a measurement. Rules:</p>
+  <ul>
+    <li>All non-zero digits are significant</li>
+    <li>Zeros between significant digits are significant</li>
+    <li>Leading zeros are not significant</li>
+    <li>Trailing zeros in decimals are significant</li>
+  </ul>
+
+  <h3>7. Measuring Volume of Irregular Objects</h3>
+  <p>Use a Eureka can:</p>
+  <ol>
+    <li>Fill with water until it overflows</li>
+    <li>Let overflow stop</li>
+    <li>Drop object gently</li>
+    <li>Collect displaced water in measuring cylinder</li>
+    <li>Volume of displaced water = volume of object</li>
+  </ol>
+
+  <h3>8. KCSE Exam Tips</h3>
+  <ul>
+    <li>Always state units clearly</li>
+    <li>Use correct number of significant figures</li>
+    <li>Show working in calculations</li>
+    <li>Label diagrams accurately</li>
+    <li>Practice past paper questions regularly</li>
+  </ul>
+</section>
+<section id="kcse-practice">
+  <h2>📄 KCSE Past Paper Practice: Measurement</h2>
+  <p>Attempt the questions below. Click “Show Answer” to reveal the marking guide.</p>
+
+  <div class="kcse-question">
+    <p><strong>1.</strong> Name two instruments used to measure length and state their least count.</p>
+    <button onclick="toggleAnswer('a1')">Show Answer</button>
+    <div id="a1" style="display:none;">
+      <p>Ruler (least count: 1 mm), Vernier calipers (least count: 0.1 mm)</p>
+    </div>
+  </div>
+
+  <div class="kcse-question">
+    <p><strong>2.</strong> State two sources of error when measuring length using a ruler.</p>
+    <button onclick="toggleAnswer('a2')">Show Answer</button>
+    <div id="a2" style="display:none;">
+      <p>Parallax error, worn-out edges, misalignment</p>
+    </div>
+  </div>
+
+  <div class="kcse-question">
+    <p><strong>3.</strong> A student measures a wire with a micrometer screw gauge and gets 1.25 mm. The actual diameter is 1.30 mm. Calculate the percentage error.</p>
+    <button onclick="toggleAnswer('a3')">Show Answer</button>
+    <div id="a3" style="display:none;">
+      <p>Error = 0.05 mm; % error = (0.05 / 1.30) × 100 = 3.85%</p>
+    </div>
+  </div>
+
+  <div class="kcse-question">
+    <p><strong>4.</strong> Describe how to measure the volume of an irregular object using a Eureka can.</p>
+    <button onclick="toggleAnswer('a4')">Show Answer</button>
+    <div id="a4" style="display:none;">
+      <p>Fill Eureka can, let overflow stop, drop object, collect displaced water in measuring cylinder = volume</p>
+    </div>
+  </div>
+
+  <div class="kcse-question">
+    <p><strong>5.</strong> Define density and state its SI unit.</p>
+    <button onclick="toggleAnswer('a5')">Show Answer</button>
+    <div id="a5" style="display:none;">
+      <p>Density = mass/volume; SI unit = kg/m³</p>
+    </div>
+  </div>
+
+  <!-- Add 5 more questions here -->
+</section>
+<section id="badge-system">
+  <h2>🏅 Badge Gallery</h2>
+  <div class="badge-grid">
+    <div class="badge-card" id="badge-measurement">
+      <div class="badge-icon">📏</div>
+      <p>Measurement Master</p>
+    </div>
+    <div class="badge-card" id="badge-density">
+      <div class="badge-icon">⚖️</div>
+      <p>Density Genius</p>
+    </div>
+    <div class="badge-card" id="badge-error">
+      <div class="badge-icon">🧠</div>
+      <p>Error Eliminator</p>
+    </div>
+    <div class="badge-card" id="badge-instrument">
+      <div class="badge-icon">🔬</div>
+      <p>Instrument Pro</p>
+    </div>
+    <div class="badge-card" id="badge-completion">
+      <div class="badge-icon">🎓</div>
+      <p>Topic Champion</p>
+    </div>
+  </div>
+</section>
+<section id="animated-dashboard">
+  <h2>📊 Progress Tracker</h2>
+  <div style="width:100%; background:#eee; border-radius:10px;">
+    <div id="progressBar" style="width:20%; background:#2c5364; color:white; padding:10px; border-radius:10px; transition:width 1s;">
+      20% Complete
+    </div>
+  </div>
+  <button onclick="updateProgress()">Mark Topic Complete</button>
+</section>
+<section id="unit-converter">
+  <h2>🔁 SI Unit Converter</h2>
+  <label>Value: <input type="number" id="unitValue" /></label>
+  <select id="unitFrom">
+    <option value="mm">Millimetres</option>
+    <option value="cm">Centimetres</option>
+    <option value="m">Metres</option>
+    <option value="km">Kilometres</option>
+  </select>
+  to
+  <select id="unitTo">
+    <option value="mm">Millimetres</option>
+    <option value="cm">Centimetres</option>
+    <option value="m">Metres</option>
+    <option value="km">Kilometres</option>
+  </select>
+  <button onclick="convertUnits()">Convert</button>
+  <p id="unitResult"></p>
+</section>
+<section id="volume-estimator">
+  <h2>📦 Volume Estimator</h2>
+
+  <h3>Regular Shapes</h3>
+  <label>Length (m): <input type="number" id="length" /></label>
+  <label>Width (m): <input type="number" id="width" /></label>
+  <label>Height (m): <input type="number" id="height" /></label>
+  <button onclick="estimateVolume()">Estimate Volume</button>
+  <p id="volumeResult"></p>
+
+  <h3>Irregular Object (Displacement Method)</h3>
+  <label>Initial Water Level (ml): <input type="number" id="initial" /></label>
+  <label>Final Water Level (ml): <input type="number" id="final" /></label>
+  <button onclick="estimateDisplacement()">Estimate Displaced Volume</button>
+  <p id="displacementResult"></p>
+</section>
+<section id="career-dashboard">
+  <h2>🎓 Career Explorer</h2>
+  <table border="1" cellpadding="8">
+    <tr><th>Career</th><th>Measurement Tools</th><th>Kenyan Institutions</th></tr>
+    <tr><td>Surveyor</td><td>GPS, tape, laser rangefinder</td><td>JKUAT, TUK</td></tr>
+    <tr><td>Medical Physicist</td><td>Dosimeter, caliper</td><td>UoN, Kenyatta University</td></tr>
+    <tr><td>Civil Engineer</td><td>Total station, micrometer</td><td>Dedan Kimathi, Egerton</td></tr>
+    <tr><td>Physics Teacher</td><td>All lab instruments</td><td>TSC, KNEC</td></tr>
+    <tr><td>Pilot</td><td>Altimeter, airspeed indicator</td><td>Kenya School of Flying</td></tr>
+  </table>
+</section>
+<section id="simulators">
+  <h2>🧪 3D Instrument Simulators</h2>
+
+  <h3>📏 Ruler Simulator</h3>
+  <svg width="100%" height="120">
+    <rect x="50" y="40" width="200" height="40" fill="#2c5364" />
+    <text x="60" y="65" fill="white">Object</text>
+    <line x1="50" y1="90" x2="250" y2="90" stroke="black" />
+    <text x="50" y="105">0 cm</text>
+    <text x="250" y="105">20 cm</text>
+  </svg>
+
+  <h3>📐 Vernier Calipers</h3>
+  <svg width="100%" height="120">
+    <rect x="100" y="40" width="150" height="40" fill="#ccc" />
+    <line x1="100" y1="40" x2="100" y2="80" stroke="black" />
+    <line x1="250" y1="40" x2="250" y2="80" stroke="black" />
+    <text x="110" y="65">Pipe</text>
+  </svg>
+
+  <h3>🔬 Micrometer Screw Gauge</h3>
+  <svg width="100%" height="120">
+    <circle cx="80" cy="60" r="20" fill="#999" />
+    <rect x="100" y="40" width="100" height="40" fill="#2c5364" />
+    <text x="110" y="65" fill="white">Wire</text>
+  </svg>
+</section>
+<section id="kcse-quiz">
+  <h2>🧠 KCSE Structured Quiz</h2>
+  <ol>
+    <li>
+      Define measurement and explain its importance in physics.<br>
+      <textarea rows="3" cols="80"></textarea>
+    </li>
+    <li>
+      Name three instruments used to measure length and state their least count.<br>
+      <textarea rows="3" cols="80"></textarea>
+    </li>
+    <li>
+      A student measures a wire with a micrometer screw gauge and gets 1.25 mm. The actual diameter is 1.30 mm. Calculate the percentage error.<br>
+      <textarea rows="3" cols="80"></textarea>
+    </li>
+    <li>
+      Explain how to measure the volume of an irregular object using a Eureka can.<br>
+      <textarea rows="3" cols="80"></textarea>
+    </li>
+    <li>
+      Differentiate between accuracy and precision with examples.<br>
+      <textarea rows="3" cols="80"></textarea>
+    </li>
+  </ol>
+</section>
+<section id="drag-drop-quiz">
+  <h2>🎯 Match Instruments to Their Uses</h2>
+  <p>Drag each instrument to its correct use:</p>
+  <style>
+    .drag-container { display: flex; flex-wrap: wrap; gap: 20px; }
+    .draggable, .droppable {
+      padding: 10px;
+      border: 2px dashed #2c5364;
+      border-radius: 10px;
+      width: 200px;
+      min-height: 50px;
+      text-align: center;
+      background: #f0f8ff;
+    }
+    .draggable { cursor: grab; background: #fff; }
+    .droppable.correct { background: #d4edda; }
+  </style>
+  <div class="drag-container">
+    <div class="draggable" draggable="true" id="ruler">📏 Ruler</div>
+    <div class="draggable" draggable="true" id="vernier">📐 Vernier Calipers</div>
+    <div class="draggable" draggable="true" id="micrometer">🔬 Micrometer</div>
+    <div class="droppable" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="ruler">Measure a book’s length</div>
+    <div class="droppable" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="vernier">Measure pipe diameter</div>
+    <div class="droppable" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="micrometer">Measure wire thickness</div>
+  </div>
+  <button onclick="checkMatches()">Check Answers</button>
+  <p id="dragResult"></p>
+</section>
+
+<section id="badge-unlock" style="display:none;">
+  <h2>🏅 New Badge Unlocked!</h2>
+  <div class="badge">
+    <span class="icon">🧲</span>
+    <p>Instrument Pro</p>
+  </div>
+</section>
+
+<section id="glossary">
+  <h2>📚 Physics Glossary</h2>
+  <ul>
+    <li><strong>Accuracy:</strong> Closeness to the true value</li>
+    <li><strong>Precision:</strong> Repeatability of measurements</li>
+    <li><strong>SI Unit:</strong> Standard unit of measurement</li>
+    <li><strong>Parallax:</strong> Apparent shift due to eye position</li>
+    <li><strong>Zero Error:</strong> Instrument not reading zero</li>
+    <li><strong>Density:</strong> Mass per unit volume</li>
+    <li><strong>Volume:</strong> Space occupied by an object</li>
+    <li><strong>Mass:</strong> Quantity of matter in an object</li>
+    <li><strong>Length:</strong> Distance between two points</li>
+    <li><strong>Time:</strong> Duration between two events</li>
+    <li><strong>Temperature:</strong> Measure of thermal energy</li>
+    <li><strong>Systematic Error:</strong> Consistent measurement error</li>
+    <li><strong>Random Error:</strong> Unpredictable variation</li>
+    <li><strong>Instrument:</strong> Tool used for measurement</li>
+    <li><strong>Calibration:</strong> Adjusting instrument accuracy</li>
+    <li><strong>Reading:</strong> Value shown by an instrument</li>
+    <li><strong>Derived Quantity:</strong> Quantity from two or more base units</li>
+    <li><strong>Area:</strong> Surface covered by a shape</li>
+    <li><strong>Micrometer:</strong> Measures small thicknesses</li>
+    <li><strong>Vernier Calipers:</strong> Measures internal/external diameters</li>
+  </ul>
+</section>
+
+<section id="career-explorer">
+  <h2>🎓 Physics Careers</h2>
+  <p>Physics opens doors to exciting careers in Kenya and beyond:</p>
+  <ul>
+    <li>🛠️ Mechanical Engineer – JKUAT, TUK</li>
+    <li>🏥 Medical Physicist – UoN, Kenyatta University</li>
+    <li>📡 Telecom Technician – Zetech, Multimedia University</li>
+    <li>🛰️ Satellite Engineer – Kenya Space Agency</li>
+    <li>📊 Data Analyst – Strathmore, USIU</li>
+    <li>📚 Physics Teacher – TSC, KNEC examiner</li>
+  </ul>
+</section>
+
+<section id="copilot">
+  <h2>🤖 Ask Copilot</h2>
+  <p>Need help with a formula or concept?</p>
+  <a href="https://www.bing.com/chat" target="_blank" class="cta-button">Open Copilot Assistant</a>
+</section>
+<section id="measurement-quiz">
+  <h2>🧠 Measurement Quiz</h2>
+  <p>Test your understanding of measurement concepts. Choose the correct answer:</p>
+  <ol>
+    <li>Which instrument measures small thicknesses accurately?
+      <ul>
+        <li><input type="radio" name="q1"> Ruler</li>
+        <li><input type="radio" name="q1"> Vernier calipers</li>
+        <li><input type="radio" name="q1" checked> Micrometer screw gauge ✅</li>
+      </ul>
+    </li>
+    <li>SI unit of time is:
+      <ul>
+        <li><input type="radio" name="q2"> Minute</li>
+        <li><input type="radio" name="q2" checked> Second ✅</li>
+        <li><input type="radio" name="q2"> Hour</li>
+      </ul>
+    </li>
+    <li>Which error occurs when the eye is not level with the scale?
+      <ul>
+        <li><input type="radio" name="q3" checked> Parallax error ✅</li>
+        <li><input type="radio" name="q3"> Zero error</li>
+        <li><input type="radio" name="q3"> Systematic error</li>
+      </ul>
+    </li>
+    <!-- Add 17 more questions here -->
+  </ol>
+</section>
+
+<section id="error-estimator">
+  <h2>⚠️ Error Estimator</h2>
+  <label>Actual Value: <input type="number" id="actual" /></label>
+  <label>Measured Value: <input type="number" id="measured" /></label>
+  <button onclick="estimateError()">Estimate Error</button>
+  <p id="errorResult"></p>
+</section>
+
+<section id="instrument-guides">
+  <h2>📏 Instrument Guides</h2>
+
+  <h3>Using a Ruler</h3>
+  <p>Place the object along the ruler. Ensure your eye is level to avoid parallax error.</p>
+  <svg width="100%" height="100">
+    <line x1="0" y1="50" x2="300" y2="50" stroke="black" stroke-width="2" />
+    <rect x="100" y="30" width="100" height="40" fill="#2c5364" />
+    <text x="110" y="55" fill="white">Object</text>
+  </svg>
+
+  <h3>Using Vernier Calipers</h3>
+  <p>Close the jaws around the object. Read the main scale and Vernier scale.</p>
+  <svg width="100%" height="100">
+    <rect x="50" y="30" width="200" height="40" fill="#ccc" />
+    <line x1="50" y1="30" x2="50" y2="70" stroke="black" />
+    <line x1="250" y1="30" x2="250" y2="70" stroke="black" />
+    <text x="60" y="55">Object</text>
+  </svg>
+
+  <h3>Using Micrometer Screw Gauge</h3>
+  <p>Place the object between the spindle and anvil. Turn the ratchet until it clicks.</p>
+  <svg width="100%" height="100">
+    <circle cx="80" cy="50" r="20" fill="#999" />
+    <rect x="100" y="30" width="100" height="40" fill="#2c5364" />
+    <text x="110" y="55" fill="white">Wire</text>
+  </svg>
+</section>
+<section id="measurement">
+  <h2>📘 Form 1: Measurement (KCSE Full Module)</h2>
+
+  <h3>1. What is Measurement?</h3>
+  <p>Measurement is the process of comparing a physical quantity with a standard unit. It allows us to quantify observations and make accurate predictions in physics.</p>
+
+  <h3>2. Physical Quantities and Instruments</h3>
+  <table border="1" cellpadding="8">
+    <tr><th>Quantity</th><th>SI Unit</th><th>Instrument</th></tr>
+    <tr><td>Length</td><td>Metre (m)</td><td>Ruler, Vernier calipers, Micrometer screw gauge</td></tr>
+    <tr><td>Mass</td><td>Kilogram (kg)</td><td>Beam balance, Electronic balance</td></tr>
+    <tr><td>Time</td><td>Second (s)</td><td>Stopwatch, Clock</td></tr>
+    <tr><td>Volume</td><td>Cubic metre (m³)</td><td>Measuring cylinder, Eureka can</td></tr>
+    <tr><td>Temperature</td><td>Kelvin (K)</td><td>Thermometer</td></tr>
+  </table>
+
+  <h3>3. Common Errors in Measurement</h3>
+  <ul>
+    <li><strong>Parallax Error:</strong> Eye not level with scale</li>
+    <li><strong>Zero Error:</strong> Instrument doesn’t read zero when it should</li>
+    <li><strong>Systematic Error:</strong> Faulty calibration</li>
+    <li><strong>Random Error:</strong> Human reaction or environmental factors</li>
+  </ul>
+
+  <h3>4. Derived Quantities</h3>
+  <ul>
+    <li><strong>Area:</strong> Length × Width (m²)</li>
+    <li><strong>Volume:</strong> Length × Width × Height (m³)</li>
+    <li><strong>Density:</strong> Mass / Volume (kg/m³)</li>
+  </ul>
+
+  <h3>5. Real-Life Applications</h3>
+  <ul>
+    <li>Construction: Measuring timber, mabati, nails</li>
+    <li>Cooking: Measuring ingredients</li>
+    <li>Farming: Measuring land area and fertilizer</li>
+    <li>Transport: Measuring fuel volume and speed</li>
+  </ul>
+
+  <h3>6. Embedded Simulation</h3>
+  <p>Use the ruler below to measure the object. Drag the ruler and zoom for precision.</p>
+  <div style="width:100%; height:300px; background:#f0f0f0; position:relative; border:1px solid #ccc;">
+    <svg width="100%" height="100%">
+      <rect x="50" y="120" width="200" height="60" fill="#2c5364" />
+      <text x="60" y="150" fill="white" font-size="16">Object</text>
+      <line x1="0" y1="100" x2="100%" y2="100" stroke="black" stroke-width="2" />
+      <line x1="0" y1="200" x2="100%" y2="200" stroke="black" stroke-width="2" />
+      <text x="10" y="95" font-size="14">Ruler: 0 cm</text>
+      <text x="250" y="95" font-size="14">Ruler: 20 cm</text>
+    </svg>
+  </div>
+
+  <h3>7. Density Calculator</h3>
+  <label>Mass (kg): <input type="number" id="mass2" /></label>
+  <label>Volume (m³): <input type="number" id="volume2" /></label>
+  <button onclick="calculateDensity()">Calculate Density</button>
+  <p id="densityResult"></p>
+
+  <h3>8. Dashboard Update</h3>
+  <ul>
+    <li>✅ Measurement completed</li>
+    <li>✅ Simulation used</li>
+    <li>✅ Density tool used</li>
+    <li>🏅 Badge unlocked: <strong>Measurement Master</strong></li>
+  </ul>
+</section>
+<section id="measurement">
+  <h2>📘 Form 1: Measurement (Full Module)</h2>
+
+  <h3>1. What is Measurement?</h3>
+  <p>Measurement is the process of comparing a physical quantity with a standard unit. It allows us to quantify observations and make accurate predictions in physics.</p>
+
+  <h3>2. Physical Quantities and Instruments</h3>
+  <table border="1" cellpadding="8">
+    <tr><th>Quantity</th><th>SI Unit</th><th>Instrument</th></tr>
+    <tr><td>Length</td><td>Metre (m)</td><td>Ruler, Vernier calipers, Micrometer screw gauge</td></tr>
+    <tr><td>Mass</td><td>Kilogram (kg)</td><td>Beam balance, Electronic balance</td></tr>
+    <tr><td>Time</td><td>Second (s)</td><td>Stopwatch, Clock</td></tr>
+    <tr><td>Volume</td><td>Cubic metre (m³)</td><td>Measuring cylinder, Eureka can</td></tr>
+    <tr><td>Temperature</td><td>Kelvin (K)</td><td>Thermometer</td></tr>
+  </table>
+
+  <h3>3. Types of Errors</h3>
+  <ul>
+    <li><strong>Parallax Error:</strong> Eye not level with scale</li>
+    <li><strong>Zero Error:</strong> Instrument doesn’t read zero when it should</li>
+    <li><strong>Systematic Error:</strong> Faulty calibration</li>
+    <li><strong>Random Error:</strong> Human reaction or environmental factors</li>
+  </ul>
+
+  <h3>4. Derived Quantities</h3>
+  <ul>
+    <li><strong>Area:</strong> Length × Width (m²)</li>
+    <li><strong>Volume:</strong> Length × Width × Height (m³)</li>
+    <li><strong>Density:</strong> Mass / Volume (kg/m³)</li>
+  </ul>
+
+  <h3>5. Real-Life Applications</h3>
+  <ul>
+    <li>Construction: Measuring timber, mabati, nails</li>
+    <li>Cooking: Measuring ingredients</li>
+    <li>Farming: Measuring land area and fertilizer</li>
+    <li>Transport: Measuring fuel volume and speed</li>
+  </ul>
+
+  <h3>6. KCSE-Style Quiz</h3>
+  <ul>
+    <li>Best instrument for wire diameter? <strong>Micrometer screw gauge ✅</strong></li>
+    <li>SI unit of mass? <strong>Kilogram ✅</strong></li>
+    <li>Accurate time instrument? <strong>Stopwatch ✅</strong></li>
+    <li>Error from wrong eye position? <strong>Parallax error ✅</strong></li>
+    <li>Volume of irregular object? <strong>Displacement method ✅</strong></li>
+  </ul>
+
+  <h3>7. Density Calculator</h3>
+  <label>Mass (kg): <input type="number" id="mass2" /></label>
+  <label>Volume (m³): <input type="number" id="volume2" /></label>
+  <button onclick="calculateDensity()">Calculate Density</button>
+  <p id="densityResult"></p>
+
+  <h3>8. Simulation</h3>
+  <p>If the simulation doesn’t load, <a href="https://phet.colorado.edu/sims/html/mass-spring-lab/latest/mass-spring-lab_en.html" target="_blank">click here to open it directly</a>.</p>
+  <iframe src="https://phet.colorado.edu/sims/html/mass-spring-lab/latest/mass-spring-lab_en.html" width="100%" height="500px" style="border:none;"></iframe>
+
+  <h3>9. Ask Copilot</h3>
+  <p><a href="https://www.bing.com/chat" target="_blank" class="cta-button">Ask Copilot for help</a></p>
+
+  <h3>10. Dashboard Update</h3>
+  <ul>
+    <li>✅ Measurement completed</li>
+    <li>✅ Quiz passed</li>
+    <li>✅ Density tool used</li>
+    <li>✅ Simulation viewed</li>
+    <li>🏅 Badge unlocked: <strong>Measurement Master</strong></li>
+  </ul>
+</section>
+    <!-- Offline Warning -->
+    <section class="offline-warning" id="offlineWarning" style="display:none;">
+      <h2>⚠️ Offline Mode</h2>
+      <p>You appear to be offline. Some simulations and Copilot features may not work. Please check your internet connection.</p>
+    </section>
+
+    <!-- Form 1: Measurement -->
+    <section id="lesson">
+      <h2>📘 Form 1: Measurement</h2>
+      <p>Measurement is the process of comparing a physical quantity with a standard unit. In physics, we measure quantities like length, mass, time, temperature, and volume.</p>
+      <ul>
+        <li><strong>Length:</strong> Ruler, Vernier calipers, Micrometer screw gauge</li>
+        <li><strong>Mass:</strong> Beam balance, Electronic balance</li>
+        <li><strong>Time:</strong> Stopwatch, Clock</li>
+        <li><strong>Volume:</strong> Measuring cylinder, Eureka can</li>
+      </ul>
+      <p><em>Example:</em> Accurate measurement of timber and iron sheets ensures a perfect fit when building a mabati house.</p>
+    </section>
+
+    <!-- Quiz -->
+    <section>
+      <h2>🧠 Quiz</h2>
+      <ul>
+        <li>Which instrument is best for measuring the diameter of a wire? <strong>Micrometer screw gauge ✅</strong></li>
+        <li>What is the SI unit of mass? <strong>Kilogram ✅</strong></li>
+        <li>Which instrument measures time accurately in seconds? <strong>Stopwatch ✅</strong></li>
+        <li>What is the reading error in a ruler called? <strong>Parallax error ✅</strong></li>
+        <li>Which method is used to measure the volume of an irregular object? <strong>Displacement method ✅</strong></li>
+      </ul>
+    </section>
+
+    <!-- Simulation -->
+    <section>
+      <h2>🧪 Simulation</h2>
+      <p>If the simulation doesn't load, <a href="https://phet.colorado.edu/sims/html/mass-spring-lab/latest/mass-spring-lab_en.html" target="_blank">click here to open it directly</a>.</p>
+      <iframe src="https://phet.colorado.edu/sims/html/mass-spring-lab/latest/mass-spring-lab_en.html" width="100%" height="500px" style="border:none;"></iframe>
+    </section>
+
+    <!-- Heat Calculator -->
+    <section>
+      <h2>🔥 Heat Calculator</h2>
+      <label>Mass (kg): <input type="number" id="mass" /></label>
+      <label>Specific Heat Capacity (J/kg°C): <input type="number" id="shc" /></label>
+      <label>Temperature Change (°C): <input type="number" id="temp" /></label>
+      <button onclick="calculateHeat()">Calculate</button>
+      <p id="result"></p>
+    </section>
+
+    <!-- Copilot Assistant -->
+    <section class="copilot-box">
+      <h2>🔍 Ask Copilot</h2>
+      <p>If the embedded chat doesn’t work, <a href="https://www.bing.com/chat" target="_blank">click here to open Copilot in a new tab</a>.</p>
+    </section>
+
+    <!-- Dashboard -->
+    <section>
+      <h2>📊 Dashboard</h2>
+      <ul>
+        <li>Form 1: ✅ 1/5 topics completed</li>
+        <li>KCSE Readiness: 20%</li>
+      </ul>
+      <progress value="20" max="100"></progress>
+    </section>
+
+    <!-- Badges -->
+    <section class="badge-container">
+      <h2>🏅 Badges Earned</h2>
+      <div class="badge">
+        <span class="icon">📏</span>
+        <p>Measurement Master</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Jitimu Physics Hub | Built for KCSE Success</p>
+  </footer>
+
+  <script>
+function toggleAnswer(id) {
+  const answer = document.getElementById(id);
+  if (answer.style.display === "none") {
+    answer.style.display = "block";
+  } else {
+    answer.style.display = "none";
+  }
+}
+function unlockBadge(id) {
+  const badge = document.getElementById(id);
+  if (badge) {
+    badge.classList.add("unlocked");
+  }
+}
+
+// Example triggers
+function onMeasurementComplete() {
+  unlockBadge("badge-measurement");
+}
+function onDensityToolUsed() {
+  unlockBadge("badge-density");
+}
+function onErrorEstimatorUsed() {
+  unlockBadge("badge-error");
+}
+function onInstrumentQuizPassed() {
+  unlockBadge("badge-instrument");
+}
+function onTopicFullyCompleted() {
+  unlockBadge("badge-completion");
+}function estimateVolume() {
+  const l = parseFloat(document.getElementById('length').value);
+  const w = parseFloat(document.getElementById('width').value);
+  const h = parseFloat(document.getElementById('height').value);
+  const V = l * w * h;
+  document.getElementById('volumeResult').innerText = `Volume = ${V.toFixed(2)} m³`;
+}
+
+function estimateDisplacement() {
+  const i = parseFloat(document.getElementById('initial').value);
+  const f = parseFloat(document.getElementById('final').value);
+  const V = f - i;
+  document.getElementById('displacementResult').innerText = `Displaced Volume = ${V.toFixed(2)} ml`;
+}
+
+function convertUnits() {
+  const value = parseFloat(document.getElementById('unitValue').value);
+  const from = document.getElementById('unitFrom').value;
+  const to = document.getElementById('unitTo').value;
+  const factors = { mm: 0.001, cm: 0.01, m: 1, km: 1000 };
+  const result = (value * factors[from]) / factors[to];
+  document.getElementById('unitResult').innerText = `${value} ${from} = ${result.toFixed(4)} ${to}`;
+}
+
+let progress = 20;
+function updateProgress() {
+  if (progress < 100) progress += 20;
+  const bar = document.getElementById('progressBar');
+  bar.style.width = progress + '%';
+  bar.innerText = `${progress}% Complete`;
+}
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+function drop(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  const dragged = document.getElementById(data);
+  if (ev.target.classList.contains("droppable")) {
+    ev.target.innerHTML = "";
+    ev.target.appendChild(dragged);
+  }
+}
+document.querySelectorAll(".draggable").forEach(el => {
+  el.addEventListener("dragstart", ev => {
+    ev.dataTransfer.setData("text", ev.target.id);
+  });
+});
+function checkMatches() {
+  let correct = 0;
+  document.querySelectorAll(".droppable").forEach(box => {
+    const expected = box.getAttribute("data-answer");
+    const child = box.querySelector(".draggable");
+    if (child && child.id === expected) {
+      box.classList.add("correct");
+      correct++;
+    }
+  });
+  document.getElementById("dragResult").innerText = `You got ${correct}/3 correct.`;
+  if (correct === 3) {
+    document.getElementById("badge-unlock").style.display = "block";
+  }
+}
+function estimateError() {
+  const actual = parseFloat(document.getElementById('actual').value);
+  const measured = parseFloat(document.getElementById('measured').value);
+  const error = Math.abs(measured - actual);
+  const percent = (error / actual) * 100;
+  document.getElementById('errorResult').innerText = `Error = ${error.toFixed(2)} units (${percent.toFixed(2)}%)`;
+}
+function calculateDensity() {
+  const m = parseFloat(document.getElementById('mass2').value);
+  const v = parseFloat(document.getElementById('volume2').value);
+  const d = m / v;
+  document.getElementById('densityResult').innerText = `Density = ${d.toFixed(2)} kg/m³`;
+}
+function calculateDensity() {
+  const m = parseFloat(document.getElementById('mass2').value);
+  const v = parseFloat(document.getElementById('volume2').value);
+  const d = m / v;
+  document.getElementById('densityResult').innerText = `Density = ${d.toFixed(2)} kg/m³`;
+}
+    function calculateHeat() {
+      const m = parseFloat(document.getElementById('mass').value);
+      const c = parseFloat(document.getElementById('shc').value);
+      const ΔT = parseFloat(document.getElementById('temp').value);
+      const Q = m * c * ΔT;
+      document.getElementById('result').innerText = `Quantity of Heat = ${Q.toFixed(2)} Joules`;
+    }
+
+    // Offline detection
+    window.addEventListener('load', () => {
+      if (!navigator.onLine) {
+        document.getElementById('offlineWarning').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
